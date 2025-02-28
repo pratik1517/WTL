@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script lang="javascript">
+        function add() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = a + b;
+            document.getElementById("c").value = c;
+        }
+        function sub() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = a - b;
+            document.getElementById("c").value = c;
+        }
+        function mul() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = a * b;
+            document.getElementById("c").value = c;
+        }
+        function div() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = a / b;
+            document.getElementById("c").value = c;
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"] {
+            width: 250px;
+            height: 40px;
+            font-size: 18px;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        input[type="button"] {
+            width: 60px;
+            height: 40px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="button"]:active {
+            background-color: #388e3c;
+        }
+
+        input[type="text"][readonly] {
+            background-color: #f9f9f9;
+        }
+
+        input[type="text"]:focus, input[type="button"]:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        .calculator {
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+    <form name="b1">
+        <table>
+            <tr>
+                <td><input type="text" name="d" size="20" readonly></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="b1.d.value += '1'">
+                    <input type="button" value="2" onclick="b1.d.value += '2'">
+                    <input type="button" value="3" onclick="b1.d.value += '3'">
+                    <input type="button" value="+" onclick="b1.d.value += '+'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" onclick="b1.d.value += '4'">
+                    <input type="button" value="5" onclick="b1.d.value += '5'">
+                    <input type="button" value="6" onclick="b1.d.value += '6'">
+                    <input type="button" value="-" onclick="b1.d.value += '-'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="7" onclick="b1.d.value += '7'">
+                    <input type="button" value="8" onclick="b1.d.value += '8'">
+                    <input type="button" value="9" onclick="b1.d.value += '9'">
+                    <input type="button" value="*" onclick="b1.d.value += '*'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="0" onclick="b1.d.value += '0'">
+                    <input type="button" value="." onclick="b1.d.value += '.'">
+                    <input type="button" value="/" onclick="b1.d.value += '/'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="C" onclick="b1.d.value = ''">
+                    <input type="button" value="=" onclick="b1.d.value = eval(b1.d.value)">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
